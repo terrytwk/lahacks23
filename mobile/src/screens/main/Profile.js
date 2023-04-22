@@ -125,8 +125,9 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
   button: {
-    paddingLeft: 55,
-    paddingRight: 55,
+    // paddingLeft: 55,
+    // paddingRight: 55,
+    width: '90%',
     paddingTop: 7,
     paddingBottom: 7,
     backgroundColor: '#efefef', //button background color
@@ -139,6 +140,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontWeight: 'bold',
     fontSize: 12,
+    textAlign: 'center',
   },
 });
 
