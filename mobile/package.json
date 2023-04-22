@@ -12,6 +12,7 @@
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
+    "appwrite": "^11.0.0",
     "expo": "~48.0.11",
     "expo-secure-store": "~12.1.1",
     "expo-splash-screen": "~0.18.1",
