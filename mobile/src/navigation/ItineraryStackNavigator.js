@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Itinerary from "../screens/main/Itinerary";
 import MainBottomTabNavigator from "./MainBottomTabNavigator";
 
+
 const AuthStack = createStackNavigator();
 
 const AuthStackNavigator = () => {
