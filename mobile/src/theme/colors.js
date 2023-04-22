@@ -1,8 +1,7 @@
-
 const colors = {
-  primary: "#3752FB",
-  primaryLight: "#D35750",
-  primaryLightest: "#E98575",
+  primary: "#d77900",
+  primaryLight: "#E29E44",
+  primaryLightest: "#EFC58F",
   secondary: "",
   error: "#B52422",
   textPrimary: "#FFFFFF", // replacement for white
