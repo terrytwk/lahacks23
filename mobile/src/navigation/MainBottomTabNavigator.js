@@ -10,15 +10,15 @@ import Profile from "../screens/main/Profile";
 
 const MainTab = createBottomTabNavigator();
 
-const LogoTitle = () => {
-  return (
-    // <Image
-    //   style={styles.headerTitleStyle}
-    //   source={require("../../assets/title-logo.png")}
-    // />
-    <Text>Header</Text>
-  );
-};
+// const LogoTitle = () => {
+//   return (
+//     // <Image
+//     //   style={styles.headerTitleStyle}
+//     //   source={require("../../assets/title-logo.png")}
+//     // />
+//     <Text>Header</Text>
+//   );
+// };
 
 const ScanTab = ({ iconName }) => {
   return (
@@ -60,9 +60,10 @@ const TabNavigatorOptions = ({ navigation, route }) => ({
   },
   tabBarActiveTintColor: colors.primary,
   tabBarInactiveTintColor: "gray",
-  headerStyle: styles.headerStyle,
-  headerRight: () => <HeaderNotification navigation={navigation} />,
-  headerTitle: () => <LogoTitle />,
+  //headerShown: false
+  // headerStyle: styles.headerStyle,
+  // headerRight: () => <HeaderNotification navigation={navigation} />,
+  // headerTitle: () => <LogoTitle />,
 });
 
 function MainBottomTabNavigator() {
