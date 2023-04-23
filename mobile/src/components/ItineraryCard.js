@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function ItineraryCard({ navigation, post }) {
+function ItineraryCard({ navigation, post={} }) {
   const onPressEvent = () => {
     navigation.navigate("Itinerary", {
       post,

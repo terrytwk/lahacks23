@@ -115,4 +115,53 @@ const feedPosts1 = [
   },
 ];
 
-export { profilePosts1, user1, feedPosts1 };
+const explorePosts1 = [{
+  id: 1,
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/2/2f/Hollywood_sign_%288485145044%29.jpg",
+  title: "LA Hacks 2023",
+  location: "Los Angeles, USA",
+  date: "April 21, 2023 - April 23, 2023",
+},{
+  id: 2,
+  image:
+    "https://media.istockphoto.com/id/825319778/photo/sunset-on-beach.jpg?b=1&s=170667a&w=0&k=20&c=ILkxevFi52FO-3P8fcWCXJmwiu8F0OZTtabHY-P0MMM=",
+  title: "Beach Trip",
+  location: "Hawaii, USA",
+  date: "May 21, 2022 - December 5 2022",
+},
+{
+  id: 3,
+  image:
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/97/39/7f/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_f31158e4bb953d28a308",
+  title: "Japanese Fashion",
+  location: "Tokyo, Japan",
+  date: "June 19, 2021 - July 6 2021",
+},
+{
+  id: 4,
+  image:
+    "https://www.tripsavvy.com/thmb/P1QE9pA-rxHceEx7lAk5RJJqTFk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Shanghai-5a824654875db90037d7834a.jpg",
+  title: "Cyberpunk",
+  location: "Beijing, China",
+  date: "July 9, 2020 - July 23, 2021",
+},
+{
+  id: 5,
+  image:
+    "https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/cataluna/camp-nou-barcelona-c-fcbarcelona.jpg",
+  title: "Spanish Futbol",
+  location: "Barcelona, Spain",
+  date: "July 9, 2020 - July 23, 2021",
+},
+{
+  id: 6,
+  image:
+    "https://cdn.britannica.com/06/171306-050-C88DD752/Aurora-borealis-peninsula-Snaefellsnes-Iceland-March-2013.jpg",
+  title: "Aurora",
+  location: "Reykjavík, Iceland",
+  date: "July 9, 2020 - July 23, 2021",
+},
+]
+
+export { profilePosts1, user1, feedPosts1, explorePosts1 };
