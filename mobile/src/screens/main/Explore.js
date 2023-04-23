@@ -1,9 +1,14 @@
 import { View, Text } from "react-native";
 
+import SearchBox from "../../components/SearchBox";
+import TagContainer from "../../components/TagContainer";
+
 const Explore = () => {
   return (
     <View>
-      <Text>explore</Text>
+      <SearchBox />
+      <TagContainer />
+      <View></View>
     </View>
   );
 };

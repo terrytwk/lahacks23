@@ -16,7 +16,7 @@ const Itinerary = ({
   length,
   price,
   fromProfile = false,
-  isCreating = true,
+  isCreating = false,
 }) => {
   const [activeDay, setActiveDay] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
