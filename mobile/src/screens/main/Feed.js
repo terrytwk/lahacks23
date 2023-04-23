@@ -1,5 +1,7 @@
 import { View, Text, Button } from "react-native";
 
+import FeedPost from "../../components/FeedPost";
+
 const Feed = ({ navigation }) => {
   return (
     <View>
@@ -8,6 +10,7 @@ const Feed = ({ navigation }) => {
         title="Go to Itinerary"
         onPress={() => navigation.navigate("Itinerary")}
       />
+      <FeedPost navigation={navigation} />
     </View>
   );
 };
