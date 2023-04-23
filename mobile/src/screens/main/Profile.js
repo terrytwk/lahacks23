@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -307,7 +307,7 @@ const Profile = () => {
                   title={firstPost.title}
                   location={firstPost.location}
                   date={firstPost.date}
-                  // navigation={navigation}
+                  navigation={navigation}
                 />
               </View>
               <View style={styles.box}>
@@ -316,7 +316,7 @@ const Profile = () => {
                   title={secondPost.title}
                   location={secondPost.location}
                   date={secondPost.date}
-                  // navigation={navigation}
+                  navigation={navigation}
                 />
               </View>
             </View>
@@ -327,7 +327,7 @@ const Profile = () => {
                     title={thirdPost.title}
                     location={thirdPost.location}
                     date={thirdPost.date}
-                    // navigation={navigation}
+                    navigation={navigation}
                   />
                 </View>
                 <View style={styles.secondRowCardBox}>
@@ -336,7 +336,7 @@ const Profile = () => {
                     title={fourthPost.title}
                     location={fourthPost.location}
                     date={fourthPost.date}
-                    // navigation={navigation}
+                    navigation={navigation}
                   />
               </View>
             </View>
