@@ -24,6 +24,10 @@ const Itinerary = ({
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Title</Text>
+      <Text style={styles.length}>
+        Hopped from <Text style={{ fontWeight: 700 }}>Terry Kim</Text>'s
+        itinerary
+      </Text>
       <Text style={styles.length}>Length</Text>
       <Text style={styles.price}>Price</Text>
       <ItineraryDate
