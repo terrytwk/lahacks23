@@ -62,10 +62,11 @@ const styles = StyleSheet.create({
   },
 });
 
-function ItineraryCard({ image, id, title, navigation, location, date }) {
+function ItineraryCard({ navigation, post }) {
   const onPressEvent = () => {
     navigation.navigate("Itinerary", {
-      id,
+      post,
+      fromProfile: true,
     });
   };
 
@@ -73,18 +74,18 @@ function ItineraryCard({ image, id, title, navigation, location, date }) {
     <TouchableOpacity>
       <Card onPress={onPressEvent} style={styles.card}>
         <ImageBackground
-          source={image}
+          source={{ uri: post.image }}
           resizeMode="cover"
           style={styles.cardImage}
         >
-          <Text style={styles.titleCard}>{title}</Text>
+          <Text style={styles.titleCard}>{post.title}</Text>
           <View style={{ flex: 1, flexDirection: "row" }}>
             <FontAwesome name="map-marker" size={12} style={styles.icon} />
-            <Text style={styles.textLocation}>{location}</Text>
+            <Text style={styles.textLocation}>{post.location}</Text>
           </View>
           <View style={{ flex: 1, flexDirection: "row" }}>
             <FontAwesome name="calendar-o" size={12} style={styles.calIcon} />
-            <Text style={styles.textDate}>{date}</Text>
+            <Text style={styles.textDate}>{post.date}</Text>
           </View>
         </ImageBackground>
       </Card>

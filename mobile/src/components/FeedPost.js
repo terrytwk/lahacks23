@@ -2,7 +2,6 @@ import { View, Text, StyleSheet, Image } from "react-native";
 import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
 
 import PostInteraction from "./PostInteraction";
-import ItineraryCard from "./ItineraryCard";
 
 const FeedPost = ({ navigation, post }) => {
   return (
@@ -64,7 +63,9 @@ const PostFooter = ({ navigation, post }) => {
         navigation={navigation}
         icon_name="share"
         count={post.shares}
+        post={post}
       />
+
       <PostInteraction
         navigation={navigation}
         icon_name="comment"

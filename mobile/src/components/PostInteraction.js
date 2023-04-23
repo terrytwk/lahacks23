@@ -9,6 +9,7 @@ const PostInteraction = ({
   active,
   navigation,
   count,
+  post = {},
 }) => {
   const [flyState, setFlyState] = useState(active);
   const [increment, setIncrement] = useState(0);
@@ -18,7 +19,7 @@ const PostInteraction = ({
       setFlyState(!flyState);
       setIncrement(!Boolean(increment) ? 1 : 0);
     } else if (icon_name == "share") {
-      navigation.navigate("Itinerary");
+      navigation.navigate("Itinerary", { post });
     }
   };
 

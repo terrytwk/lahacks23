@@ -18,6 +18,9 @@ const Feed = ({ navigation }) => {
       likes: 120,
       shares: 67,
       comments: 18,
+      length: 5,
+      price: "1,270",
+      forkFrom: "Terry",
     },
     {
       user: {
@@ -33,6 +36,9 @@ const Feed = ({ navigation }) => {
       likes: 458,
       shares: 182,
       comments: 46,
+      length: 7,
+      price: "936",
+      forkFrom: "Sam",
     },
     {
       user: {
@@ -48,6 +54,9 @@ const Feed = ({ navigation }) => {
       likes: 82,
       shares: 23,
       comments: 6,
+      length: 7,
+      price: "2,438",
+      forkFrom: "Kenny",
     },
   ];
   return (

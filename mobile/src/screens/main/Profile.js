@@ -16,56 +16,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import ItineraryCard from "../../components/ItineraryCard";
 import PropTypes from "prop-types";
 import { Context as AuthContext } from "../../context/AuthContext";
-
-//user data object
-const data = {
-  id: 1,
-  username: "kennywan",
-  backgroundImage: "https://images8.alphacoders.com/117/1171898.jpg",
-  profilePicture:
-    "https://media.licdn.com/dms/image/D5603AQHL80r1eHfwsw/profile-displayphoto-shrink_800_800/0/1664473729287?e=1687392000&v=beta&t=SmnHhFTlmhBGVQRUoDdCK8uCcDzskX7eB7-puT8w5Ww",
-  name: "Kenny Wan",
-  followerCount: "228K",
-  followingCount: "134",
-  bio: "LA, 23 y/o, creative mind. Loves traveling on a budget as a student. Message me for recs of places to go :)",
-  website: "studenttraveler.com",
-};
-
-const firstPost = {
-  id: 1,
-  image:
-    "https://upload.wikimedia.org/wikipedia/commons/2/2f/Hollywood_sign_%288485145044%29.jpg",
-  title: "LA Hacks 2023",
-  location: "Los Angeles, USA",
-  date: "April 21, 2023 - April 23, 2023",
-};
-
-const secondPost = {
-  id: 1,
-  image:
-    "https://media.istockphoto.com/id/825319778/photo/sunset-on-beach.jpg?b=1&s=170667a&w=0&k=20&c=ILkxevFi52FO-3P8fcWCXJmwiu8F0OZTtabHY-P0MMM=",
-  title: "Beach Trip",
-  location: "Hawaii, USA",
-  date: "May 21, 2022 - December 5 2022",
-};
-
-const thirdPost = {
-  id: 1,
-  image:
-    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/97/39/7f/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_f31158e4bb953d28a308",
-  title: "Japanese Fashion",
-  location: "Tokyo, Japan",
-  date: "June 19, 2021 - July 6 2021",
-};
-
-const fourthPost = {
-  id: 1,
-  image:
-    "https://theplanetd.com/images/Where-to-Stay-in-Paris-Neighborhoods.jpg",
-  title: "French Eats",
-  location: "Paris, France",
-  date: "July 9, 2020 - July 23, 2021",
-};
+import { user1 as data, profilePosts1 as posts } from "../../utils/data";
 
 //styling
 const styles = StyleSheet.create({
@@ -240,15 +191,6 @@ const Profile = ({ navigation }) => {
   const [following, setFollowing] = useState("");
   // const [tag, onChangeTag] = useState('');
 
-  // const handleClear = () => {
-  //   id: '',
-  //   userName: '',
-  //   profilePicture: 'https://m.media-amazon.com/images/I/31LZC6lJXcL.jpg',
-  //   firstName: 'User',
-  //   lastName: 'NumbaOne',
-  //   bio: 'certified bro',
-  // };
-
   const handleUpdate = () => {};
 
   const { logout } = useContext(AuthContext);
@@ -288,7 +230,7 @@ const Profile = ({ navigation }) => {
               <View style={styles.box}>
                 <Image
                   source={{
-                    uri: "https://media.licdn.com/dms/image/D5603AQHL80r1eHfwsw/profile-displayphoto-shrink_800_800/0/1664473729287?e=1687392000&v=beta&t=SmnHhFTlmhBGVQRUoDdCK8uCcDzskX7eB7-puT8w5Ww",
+                    uri: data.profile,
                   }}
                   resizeMode="cover"
                   style={styles.avatar}
@@ -303,7 +245,7 @@ const Profile = ({ navigation }) => {
             <Text style={styles.bio}>{data.bio}</Text>
             <Text
               style={styles.website}
-              onPress={() => Linking.openURL("http://studenttravel.com/")}
+              onPress={() => Linking.openURL(data.website)}
             >
               {data.website}
             </Text>
@@ -321,42 +263,18 @@ const Profile = ({ navigation }) => {
             </View>
             <View style={styles.cardContainer}>
               <View style={styles.box}>
-                <ItineraryCard
-                  image={{ uri: firstPost.image }}
-                  title={firstPost.title}
-                  location={firstPost.location}
-                  date={firstPost.date}
-                  navigation={navigation}
-                />
+                <ItineraryCard post={posts[0]} navigation={navigation} />
               </View>
               <View style={styles.box}>
-                <ItineraryCard
-                  image={{ uri: secondPost.image }}
-                  title={secondPost.title}
-                  location={secondPost.location}
-                  date={secondPost.date}
-                  navigation={navigation}
-                />
+                <ItineraryCard post={posts[1]} navigation={navigation} />
               </View>
             </View>
             <View style={styles.secondRowContainer}>
               <View style={styles.secondRowCardBox}>
-                <ItineraryCard
-                  image={{ uri: thirdPost.image }}
-                  title={thirdPost.title}
-                  location={thirdPost.location}
-                  date={thirdPost.date}
-                  navigation={navigation}
-                />
+                <ItineraryCard post={posts[2]} navigation={navigation} />
               </View>
               <View style={styles.secondRowCardBox}>
-                <ItineraryCard
-                  image={{ uri: fourthPost.image }}
-                  title={fourthPost.title}
-                  location={fourthPost.location}
-                  date={fourthPost.date}
-                  navigation={navigation}
-                />
+                <ItineraryCard post={posts[3]} navigation={navigation} />
               </View>
             </View>
           </View>
