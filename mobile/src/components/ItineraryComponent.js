@@ -13,12 +13,18 @@ import CustomModal from "./CustomModal";
 
 import colors from "../theme/colors";
 
-const ItineraryComponent = ({ events = [], modalVisible, setModalVisible }) => {
+const ItineraryComponent = ({
+  events = [],
+  modalVisible,
+  setModalVisible,
+  isCreating,
+}) => {
   const [selectedEvent, setSelectedEvent] = useState({});
 
   return (
     <View>
       <ScrollView>
+        {isCreating ? <PlusEvent /> : null}
         {events.map((e, i) => (
           <TouchableOpacity
             key={i}
@@ -57,6 +63,14 @@ const ModalBody = ({ selectedEvent }) => {
   );
 };
 
+const PlusEvent = () => {
+  return (
+    <View style={styles.plusEventContainer}>
+      <Text style={styles.plusEventText}>+ Add new event</Text>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   modalBodyContainer: {
     flex: 1,
@@ -68,6 +82,19 @@ const styles = StyleSheet.create({
   secondaryText: {
     color: colors.textTernary,
     marginTop: 5,
+  },
+  plusEventContainer: {
+    borderWidth: 2,
+    borderColor: colors.border,
+    borderStyle: "dashed",
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: 10,
+    marginBottom: 5,
+    padding: 20,
+  },
+  plusEventText: {
+    fontWeight: 700,
   },
 });
 

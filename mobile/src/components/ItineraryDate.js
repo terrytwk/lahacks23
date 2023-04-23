@@ -8,7 +8,7 @@ import {
 
 import colors from "../theme/colors";
 
-const ItineraryDate = ({ activeDay, setActiveDay, length }) => {
+const ItineraryDate = ({ activeDay, setActiveDay, length, isCreating }) => {
   return (
     <View>
       <ScrollView
@@ -16,7 +16,7 @@ const ItineraryDate = ({ activeDay, setActiveDay, length }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
       >
-        {/* <PlustDate /> */}
+        {isCreating ? <PlustDate /> : null}
         {[...Array(length)].map((e, i) => (
           <Date
             key={i}
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   },
   plusContainer: {
     backgroundColor: colors.border,
-    height: 60,
+    height: 50,
     width: 50,
     alignItems: "center",
     justifyContent: "center",

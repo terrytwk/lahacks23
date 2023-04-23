@@ -16,6 +16,7 @@ const Itinerary = ({
   length,
   price,
   fromProfile = false,
+  isCreating = true,
 }) => {
   const [activeDay, setActiveDay] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
@@ -29,13 +30,15 @@ const Itinerary = ({
         activeDay={activeDay}
         setActiveDay={setActiveDay}
         length={Object.keys(itinerary1).length}
+        isCreating={isCreating}
       />
       <ItineraryComponent
         events={itinerary1[activeDay]}
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
+        isCreating={isCreating}
       />
-      {fromProfile ? null : <CustomButton title="HOP ON!✈️" />}
+      {fromProfile || isCreating ? null : <CustomButton title="HOP ON!✈️" />}
     </View>
   );
 };
