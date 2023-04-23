@@ -1,4 +1,4 @@
-import { View, Text, Button, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 
 import FeedPost from "../../components/FeedPost";
 
