@@ -42,10 +42,11 @@ const itinerary1 = {
   1: [
     {
       time: "9:00",
-      location: "UClA",
+      location: "UCLA",
       price: "$10",
       image_url: ucla_image,
       category: "Architecture",
+      description: "Make sure to participate in LA Hacks 2023!!!",
     },
     {
       time: "12:00",

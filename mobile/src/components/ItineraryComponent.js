@@ -53,12 +53,13 @@ const ItineraryComponent = ({
 };
 
 const ModalBody = ({ selectedEvent }) => {
+  console.log(selectedEvent);
   return (
     <View style={styles.modalBodyContainer}>
-      <Text style={styles.secondaryText}>Hours</Text>
+      <Text style={styles.secondaryText}>{selectedEvent.length} Hours</Text>
       <Text style={styles.secondaryText}>{selectedEvent.price}</Text>
       <Text style={styles.secondaryText}>{selectedEvent.category}</Text>
-      <Text style={styles.primaryText}>Description</Text>
+      <Text style={styles.primaryText}>{selectedEvent.description}</Text>
     </View>
   );
 };

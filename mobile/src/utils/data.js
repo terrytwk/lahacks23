@@ -6,7 +6,7 @@ const profilePosts1 = [
     title: "LA Hacks 2023",
     location: "Los Angeles, USA",
     date: "April 21, 2023 - April 23, 2023",
-    price: "0",
+    price: "90",
     length: "3",
     likes: "1038",
   },
