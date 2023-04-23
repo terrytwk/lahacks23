@@ -4,13 +4,13 @@ Do you love traveling but hate planning? Are you tired of spending countless hou
 
 ## How it Works - The Concept
 
-Itineroo features an explore page you can look through for an itinerary that fits your preferences. After you find one, you can 'fork' it and customize it to best suit your travels. You can also create and share your own travel itineraries with the community to help others plan their next adventure! 
+Itineroo features an **explore page** you can look through for an itinerary that fits your preferences. After you find one, you can **'fork' it** and customize it to best suit your travels. You can also **create and share** your own travel itineraries with the community to help others plan their next adventure! 
 
-Itineroo works like social media and even contains a hub for all 'hidden gem' TikToks, reels, and shorts. Never spend extra time looking for that hidden gem TikTok that you liked 3 weeks ago! We curate this hub and pull in videos from all platforms to ensure you have the best itinerary possible. 
+Itineroo works like **social media** and even contains a **hub** for all 'hidden gem' TikToks, reels, and shorts. Never spend extra time looking for that hidden gem TikTok that you liked 3 weeks ago! We curate this hub and pull in videos from all platforms to ensure you have the best itinerary possible. 
 
-Behind the scenes, we are currently working on an AI bot that will serve as a travel planning advisor—editing itineraries to your liking, providing links to book all your reservations, and recommending new experiences based on your preferences!
+Behind the scenes, we are currently working on an **AI bot** that will serve as a travel planning advisor—editing itineraries to your liking, providing links to book all your reservations, and recommending new experiences based on your preferences!
 
-On the commercial side, Itineroo hopes to partner with hotels to minimize the 50 million dollars lost every day due to vacant rooms. That is, through Itineroo, hotels can trade discounts on vacant rooms for advertisements that reach a captive audience of travelers. Travelers will receive bookings at a much cheaper rate while hotels are using otherwise net losses to gain valuable marketing attention.
+On the commercial side, Itineroo hopes to **partner with hotels** to minimize the 50 million dollars lost every day due to vacant rooms. That is, through Itineroo, hotels can trade discounts on vacant rooms for advertisements that reach a captive audience of travelers. Travelers will receive bookings at a much cheaper rate while hotels are using otherwise net losses to gain valuable marketing attention.
 
 Whether you're looking for inspiration for your next trip or you want to share your experiences with others, Itineroo has everything you need. Plus, with the option to connect with fellow travelers and share tips and recommendations, you'll never feel alone on your journey. **Hop into your next adventure with Itineroo!**
 
