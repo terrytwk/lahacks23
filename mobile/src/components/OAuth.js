@@ -17,7 +17,7 @@ const OAuth = () => {
       </View>
       <View style={styles.logosContainer}>
         {logos.map((l, i) => (
-          <Logo icon_name={l} />
+          <Logo icon_name={l} key={i} />
         ))}
       </View>
     </View>

@@ -30,10 +30,10 @@ const Router = () => {
   useEffect(() => {
     const prepare = async () => {
       try {
-        await tryLocalSignin();
-        // setTimeout(() => {
-        //   console.log("Trying auto-signin.");
-        // }, 2000);
+        setTimeout(async () => {
+          await tryLocalSignin();
+          console.log("Trying auto-signin.");
+        }, 3000);
       } catch (err) {
         alert("Error occurred with auto sign in");
       } finally {

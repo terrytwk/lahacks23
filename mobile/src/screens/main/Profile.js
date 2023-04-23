@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   StyleSheet,
   Text,
@@ -15,6 +15,7 @@ import colors from "../../theme/colors";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import ItineraryCard from "../../components/ItineraryCard";
 import PropTypes from "prop-types";
+import { Context as AuthContext } from "../../context/AuthContext";
 
 //user data object
 const data = {
@@ -250,6 +251,8 @@ const Profile = ({ navigation }) => {
 
   const handleUpdate = () => {};
 
+  const { logout } = useContext(AuthContext);
+
   return (
     <View style={{ height: "100%" }}>
       <ScrollView>
@@ -311,7 +314,7 @@ const Profile = ({ navigation }) => {
                 </Pressable>
               </View>
               <View style={styles.box}>
-                <Pressable style={styles.button}>
+                <Pressable style={styles.button} onPress={logout}>
                   <Text style={styles.buttonText}>Share Profile</Text>
                 </Pressable>
               </View>

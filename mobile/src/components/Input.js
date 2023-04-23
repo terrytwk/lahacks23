@@ -13,9 +13,7 @@ const Input = ({ value, setValue, placeholder }) => {
         autoCapitalize="none"
         keyboardType={placeholder === "Email" ? "email-address" : null}
         secureTextEntry={placeholder === "Password"}
-      >
-        Input
-      </TextInput>
+      />
     </View>
   );
 };
