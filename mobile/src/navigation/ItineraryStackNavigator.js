@@ -16,7 +16,11 @@ const AuthStackNavigator = () => {
         name="MainBottomTab"
         component={MainBottomTabNavigator}
       />
-      <AuthStack.Screen name="Itinerary" component={Itinerary} />
+      <AuthStack.Screen
+        name="Itinerary"
+        component={Itinerary}
+        options={{ headerShown: true, title: "Itinerary Detail" }}
+      />
     </AuthStack.Navigator>
   );
 };
