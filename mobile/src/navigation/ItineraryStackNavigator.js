@@ -19,7 +19,11 @@ const AuthStackNavigator = () => {
       <AuthStack.Screen
         name="Itinerary"
         component={Itinerary}
-        options={{ headerShown: true, title: "Itinerary Detail" }}
+        options={{
+          headerShown: true,
+          title: "Itinerary Detail",
+          headerBackTitleVisible: false,
+        }}
       />
     </AuthStack.Navigator>
   );

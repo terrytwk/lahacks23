@@ -21,13 +21,13 @@ const ItineraryComponent = ({ events = [], modalVisible, setModalVisible }) => {
       <ScrollView>
         {events.map((e, i) => (
           <TouchableOpacity
+            key={i}
             onPress={() => {
               setModalVisible(true);
               setSelectedEvent(events[i]);
             }}
           >
             <Event
-              key={i}
               time={e.time}
               location={e.location}
               price={e.price}
