@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import {
   StyleSheet, Text, TextInput, View, Button, Image, ImageBackground, Linking, Pressable, ScrollView,
-  StyleSheet, Text, TextInput, View, Button, Image, ImageBackground, Linking, Pressable, ScrollView,
 } from 'react-native';
 import colors from '../../theme/colors';
 import FontAwesome from '@expo/vector-icons/FontAwesome'
-import ItineraryCard from '../../components/ItineraryCard';
 import PropTypes from 'prop-types';
 import ItineraryCard from '../../components/ItineraryCard';
-import PropTypes from 'prop-types';
 
 //user data object
 const data = {
@@ -21,38 +18,6 @@ const data = {
   followingCount: '134',
   bio: 'LA, 23 y/o, creative mind. Loves traveling on a budget as a student. Message me for recs of places to go :)',
   website: "studenttraveler.com"
-}
-
-const firstPost = {
-  id: 1,
-  image: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Hollywood_sign_%288485145044%29.jpg',
-  title: 'LA Hacks 2023',
-  location: 'Los Angeles, USA',
-  date: 'April 21, 2023 - April 23, 2023'
-}
-
-const secondPost = {
-  id: 1,
-  image: 'https://media.istockphoto.com/id/825319778/photo/sunset-on-beach.jpg?b=1&s=170667a&w=0&k=20&c=ILkxevFi52FO-3P8fcWCXJmwiu8F0OZTtabHY-P0MMM=',
-  title: 'Beach Trip',
-  location: 'Hawaii, USA',
-  date: 'May 21, 2022 - December 5 2022'
-}
-
-const thirdPost = {
-  id: 1,
-  image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/97/39/7f/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_f31158e4bb953d28a308',
-  title: 'Japanese Fashion',
-  location: 'Tokyo, Japan',
-  date: 'June 19, 2021 - July 6 2021'
-}
-
-const fourthPost = {
-  id: 1,
-  image: 'https://theplanetd.com/images/Where-to-Stay-in-Paris-Neighborhoods.jpg',
-  title: 'French Eats',
-  location: 'Paris, France',
-  date: 'July 9, 2020 - July 23, 2021'
 }
 
 const firstPost = {
@@ -251,40 +216,6 @@ const styles = StyleSheet.create({
     marginTop: 238,
     alignItems: 'center',
   },
-  cardContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: 100,
-    marginTop: -40,
-    marginLeft: -4,
-    marginRight: -3,
-  },
-  cardBox: {
-    flex: 1,
-    height: '100%',
-    // backgroundColor: '#007bff',
-    marginLeft: 0,
-    marginRight: 0,
-    alignItems: 'center',
-  },
-  secondRowContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: 100,
-    marginLeft: -4,
-    marginRight: -3,
-  },
-  secondRowCardBox: {
-    flex: 1,
-    height: '100%',
-    // backgroundColor: '#007bff',
-    marginLeft: 0,
-    marginRight: 0,
-    marginTop: 238,
-    alignItems: 'center',
-  },
 });
 
 const Profile = ({navigation}) => {
@@ -306,9 +237,9 @@ const Profile = ({navigation}) => {
   //   bio: 'certified bro',
   // };
 
-  const handleUpdate = () => {
+  // const handleUpdate = () => {
 
-  };
+  // };
 
   return (
     <View style={{height: '100%',}}>
@@ -424,9 +355,5 @@ Profile.propTypes = {
     navigate: PropTypes.func,
   }).isRequired,
 };
-Profile.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func,
-  }).isRequired,
-};
+
 export default Profile;
