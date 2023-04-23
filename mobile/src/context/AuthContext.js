@@ -4,6 +4,8 @@ import createDataContext from "./createDataContext";
 // import validation
 import { emailValidate } from "../utils/validation";
 
+import { userLogin, userSignup } from "../api/api";
+
 const authReducer = (state, action) => {
   switch (action.type) {
     case "login":
@@ -29,10 +31,7 @@ const login =
       if (!emailValidate(email)) {
         return "Invalid email address";
       }
-      console.log("logging in...");
-      //   const response = await axios.post("/auth/login", { email, password });
-      //   const token = await response.data.token;
-      const token = "test";
+      const token = await userLogin(email, password);
       await SecureStore.setItemAsync("token", token);
       dispatch({ type: "login", payload: token });
     } catch (err) {

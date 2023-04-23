@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -17,6 +17,8 @@ import ItineraryCard from "../../components/ItineraryCard";
 import PropTypes from "prop-types";
 import { Context as AuthContext } from "../../context/AuthContext";
 import { user1 as data, profilePosts1 as posts } from "../../utils/data";
+import { getMyPosts } from "../../api/api";
+import * as SecureStore from "expo-secure-store";
 
 //styling
 const styles = StyleSheet.create({
@@ -193,7 +195,17 @@ const Profile = ({ navigation }) => {
 
   const handleUpdate = () => {};
 
+  const [posts, setPosts] = useState();
+
   const { logout } = useContext(AuthContext);
+
+  useEffect(() => {
+    const fetch = async () => {
+      const token = await SecureStore.getItemAsync("token");
+      const data = await getMyPosts(token);
+      setPosts(data);
+    };
+  }, []);
 
   return (
     <View style={{ height: "100%" }}>

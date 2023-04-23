@@ -1,30 +1,39 @@
-import {
-  StyleSheet,
-  View,
-  ScrollView,
-} from "react-native";
+import { useEffect, useState } from "react";
+import { StyleSheet, View, ScrollView } from "react-native";
 import colors from "../../theme/colors";
 import ItineraryCard from "../../components/ItineraryCard";
 import SearchBox from "../../components/SearchBox";
 import TagContainer from "../../components/TagContainer";
 // import Video from 'react-native-video';
-import video from '../../../assets/videotiktoklafood.mp4'
-import { Video } from 'expo-av';
+import video from "../../../assets/videotiktoklafood.mp4";
+import { Video } from "expo-av";
 import { explorePosts1 as posts } from "../../utils/data";
 
+import { getAllPosts } from "../../api/api";
+
 const dataExplore = {
-  image: 'https://a.cdn-hotels.com/gdcs/production160/d214/3eabdca3-7b44-4aae-85dd-d12b8522bbe5.jpg',
-  title: 'Venice Beach',
-  location: 'Los Angeles, USA',
-  date: 'May 21, 2022 - May 23, 2022',
-}
+  image:
+    "https://a.cdn-hotels.com/gdcs/production160/d214/3eabdca3-7b44-4aae-85dd-d12b8522bbe5.jpg",
+  title: "Venice Beach",
+  location: "Los Angeles, USA",
+  date: "May 21, 2022 - May 23, 2022",
+};
 
 const Explore = ({ navigation }) => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetch = async () => {
+      const data = await getAllPosts();
+      setPosts(data);
+    };
+  }, []);
+
   return (
     <View>
       <SearchBox />
       <View>
-        <TagContainer/>
+        <TagContainer />
       </View>
       <View style={styles.topView}>
         <ScrollView>
@@ -118,7 +127,7 @@ const Explore = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   topView: {
     marginBottom: 0,
@@ -126,7 +135,7 @@ const styles = StyleSheet.create({
   },
   leftCol: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: "column",
     paddingRight: 20,
   },
   square: {
@@ -142,12 +151,12 @@ const styles = StyleSheet.create({
   rightCol: {
     flex: 1,
     // backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   video: {
-    width: '120%',
-    height: '120%',
+    width: "120%",
+    height: "120%",
     marginTop: 7,
     marginLeft: 30,
   },
@@ -200,7 +209,7 @@ const styles = StyleSheet.create({
   },
   container2: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: "column",
     marginTop: 7,
   },
   row2: {
@@ -208,7 +217,7 @@ const styles = StyleSheet.create({
     gap: 13,
     marginRight: 3,
     marginBottom: 7,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   cell: {
     flex: 1,
@@ -218,16 +227,19 @@ const styles = StyleSheet.create({
 
 export default Explore;
 
-{/* <Video  
+{
+  /* <Video  
                   source={video}  
                   style={styles.video}
                   isLooping={true}
                   shouldPlay={true}
                   resizeMode={ResizeMode.CONTAIN}
                   useNativeControls={false}
-                /> */}
+                /> */
+}
 
-{/* <ImageBackground
+{
+  /* <ImageBackground
                     src={dataExplore.image}
                     resizeMode="cover"
                     style={styles.cardImage}
@@ -241,4 +253,5 @@ export default Explore;
                       <FontAwesome name="calendar-o" size={12} style={styles.calIcon} />
                       <Text style={styles.textDate}>{dataExplore.date}</Text>
                     </View>
-                  </ImageBackground> */}
+                  </ImageBackground> */
+}

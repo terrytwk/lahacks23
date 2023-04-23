@@ -1,5 +1,6 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { AntDesign, FontAwesome } from "@expo/vector-icons";
+import Appwrite from "appwrite";
 
 import colors from "../theme/colors";
 
@@ -37,12 +38,31 @@ const Logo = ({ icon_name }) => {
   };
 
   return (
-    <View
+    <TouchableOpacity
+      onPress={activateOAuth}
       style={{ ...styles.logoContainer, borderColor: logos[icon_name].color }}
     >
       {logos[icon_name].icon}
-    </View>
+    </TouchableOpacity>
   );
+};
+
+const activateOAuth = async () => {
+  const appwrite = new Appwrite();
+
+  appwrite
+    .setEndpoint("http://localhost/v1")
+    .setProject("644414243d79643006c7");
+
+  try {
+    await appwrite.account.createOAuth2Session(
+      "auth0",
+      "dev-vdnc01pi1dzk54o5.us.auth0.com/auth/oauth2/success",
+      "dev-vdnc01pi1dzk54o5.us.auth0.com/auth/oauth2/failure"
+    );
+  } catch (error) {
+    throw error;
+  }
 };
 
 const styles = StyleSheet.create({
