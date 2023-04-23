@@ -9,6 +9,7 @@ import { Context as AuthContext } from "../context/AuthContext";
 // import navigators
 import AuthStackNavigator from "./AuthStackNavigator";
 import MainBottomTabNavigator from "./MainBottomTabNavigator";
+import ItineraryStackNavigator from "./ItineraryStackNavigator";
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -46,7 +47,7 @@ const Router = () => {
 
   return (
     <NavigationContainer theme={navTheme}>
-      {state.token ? <MainBottomTabNavigator /> : <AuthStackNavigator />}
+      {state.token ? <ItineraryStackNavigator /> : <AuthStackNavigator />}
     </NavigationContainer>
   );
 };

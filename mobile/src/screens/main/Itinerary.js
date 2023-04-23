@@ -1,9 +1,10 @@
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
-const Itinerary = () => {
+const Itinerary = ({ navigation }) => {
   return (
     <View>
       <Text>itinerary</Text>
+      <Button title="Go Back" onPress={() => navigation.pop()} />
     </View>
   );
 };

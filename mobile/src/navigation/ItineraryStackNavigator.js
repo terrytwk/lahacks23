@@ -4,17 +4,19 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Itinerary from "../screens/main/Itinerary";
 import MainBottomTabNavigator from "./MainBottomTabNavigator";
 
-
 const AuthStack = createStackNavigator();
 
 const AuthStackNavigator = () => {
   return (
     <AuthStack.Navigator
-      initialRouteName="Login"
+      initialRouteName="MainBottomTab"
       screenOptions={{ headerShown: false }}
     >
-      <AuthStack.Screen name="Login" component={Login} />
-      <AuthStack.Screen name="Signup" component={Signup} />
+      <AuthStack.Screen
+        name="MainBottomTab"
+        component={MainBottomTabNavigator}
+      />
+      <AuthStack.Screen name="Itinerary" component={Itinerary} />
     </AuthStack.Navigator>
   );
 };

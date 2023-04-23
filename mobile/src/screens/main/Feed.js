@@ -1,9 +1,13 @@
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
-const Feed = () => {
+const Feed = ({ navigation }) => {
   return (
     <View>
       <Text>feed</Text>
+      <Button
+        title="Go to Itinerary"
+        onPress={() => navigation.navigate("Itinerary")}
+      />
     </View>
   );
 };
