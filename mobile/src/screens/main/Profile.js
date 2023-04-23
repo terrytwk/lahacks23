@@ -230,7 +230,7 @@ const Profile = ({ navigation }) => {
               <View style={styles.box}>
                 <Image
                   source={{
-                    uri: data.profile,
+                    uri: data.profilePicture,
                   }}
                   resizeMode="cover"
                   style={styles.avatar}
