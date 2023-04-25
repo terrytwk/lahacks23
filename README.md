@@ -1,4 +1,4 @@
-🏆 Awarded Best Use of Appwrite at LA Hacks
+🏆 Awarded Best Use of Appwrite at LA Hacks 2023
 
 
 Go check out our [Devpost](https://devpost.com/software/netchill) for details about our project!
