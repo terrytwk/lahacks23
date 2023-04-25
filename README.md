@@ -1,3 +1,8 @@
+🏆 Awarded Best Use of Appwrite at LA Hacks
+
+
+Go check out our [Devpost](https://devpost.com/software/netchill) for details about our project!
+
 ## Inspiration
 
 Do you love traveling but hate planning? Are you tired of spending countless hours researching activities, making reservations, and looking for inspiration from others? You’re not alone. In a single year, 750 million man-hours are spent on planning a trip to just Los Angeles. **Itineroo is the ultimate solution for travelers!** 
